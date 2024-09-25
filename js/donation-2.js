@@ -22,6 +22,18 @@ document.getElementById('btn-donation2').addEventListener('click', function (eve
         // showmodal
         document.getElementById("my-modal").showModal();
 
+        // history  
+        const card1History = document.createElement('div');
+        card1History.classList = 'container mx-auto border sm:mx-auto mt-8 p-8 rounded-2xl';
+        card1History.innerHTML = `
+        <h2 class="font-bold text-xl mb-2">${inputAddDonete2} Taka is Donated for Aid for Injured in the Quota Movement </h2>
+        <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
+    `
+        const historyItem = document.getElementById('btn-history-display');
+        historyItem.insertBefore(card1History , historyItem.firstChild);
+
+
+
     }
     else {
         alert('Failed to Donate! Please try again.');

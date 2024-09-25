@@ -1,15 +1,15 @@
 
-document.getElementById('btn-donation').addEventListener('click',function(event){
+document.getElementById('btn-donation').addEventListener('click', function (event) {
     event.preventDefault();
     const moneyInput = document.getElementById('input-add-donete').value;
     const moneyInputNumber = parseFloat(moneyInput);
-    if(moneyInput >= 0){
+    if (moneyInput >= 0) {
         const donateMoney = document.getElementById('donate-money').innerText;
         const donateMoneyNumber = parseFloat(donateMoney);
-    
+
         const totalMoney = donateMoneyNumber + moneyInputNumber;
         document.getElementById('donate-money').innerText = totalMoney;
-    
+
         const mainBalance = document.getElementById('main-balance').innerText;
         const mainBalanceNumber = parseFloat(mainBalance);
         const remainingBalance = mainBalanceNumber - moneyInputNumber;
@@ -18,12 +18,17 @@ document.getElementById('btn-donation').addEventListener('click',function(event)
         // showModal
         document.getElementById("my-modal").showModal();
 
-
-        
-
-    
+        // history
+        const card1History = document.createElement('div');
+        card1History.classList = 'container mx-auto border sm:mx-auto mt-8 p-8 rounded-2xl';
+        card1History.innerHTML = `
+        <h2 class="font-bold text-xl mb-2">${moneyInput} Taka is Donated for Aid for Injured in the Quota Movement </h2>
+        <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
+    `
+        const historyItem = document.getElementById('btn-history-display');
+        historyItem.insertBefore(card1History , historyItem.firstChild);
     }
-    else{
+    else {
         alert('Failed to Donate! Please try again.');
     }
 })
