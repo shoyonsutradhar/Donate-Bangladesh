@@ -12,11 +12,13 @@ document.getElementById('btn-donation').addEventListener('click',function(event)
     
         const mainBalance = document.getElementById('main-balance').innerText;
         const mainBalanceNumber = parseFloat(mainBalance);
-    
         const remainingBalance = mainBalanceNumber - moneyInputNumber;
         document.getElementById('main-balance').innerText = remainingBalance;
 
+        // showModal
         document.getElementById("my-modal").showModal();
+
+
         
 
     
@@ -26,11 +28,4 @@ document.getElementById('btn-donation').addEventListener('click',function(event)
     }
 })
 
-
-// // donation click  color 
-// document.getElementById('btn-click').addEventListener('click',function(event){
-//     event.preventDefault();
-//     document.getElementById('btn-click').style.backgroundColor = 'green';
-
-// })
 

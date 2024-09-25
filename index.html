@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -35,12 +35,12 @@
 
   <section>
     <div class="flex justify-center gap-5 text-center pt-20">
-      <button id="btn-click" class=" btn h-10 w-28  border rounded-xl">Donation</button>
-      <button class=" btn h-10 w-24  border rounded-xl">History</button>
+      <button id="button-donation" class=" btn h-10 w-28  border rounded-xl">Donation</button>
+      <button id="button-history" class=" btn h-10 w-24  border rounded-xl">History</button>
     </div>
   </section>
 
-  <main>
+  <main class="" id="donation-btn-display">
     <!-- card-1 -->
     <div class="pt-10 px-10 ">
       <div class="lg:flex gap-20 bg-base-100  border rounded-xl p-10">
@@ -64,9 +64,8 @@
               placeholder="Write Donation Amount">
           </div>
           <div class="pt-7">
-            <button id="btn-donation" class=" btn w-full h-10 border rounded-md px-3 bg-green-500 text-black font-bold ">
-              Donate
-              Now</button>
+            <button id="btn-donation" class=" btn w-full h-10 border rounded-md px-3 bg-green-500 text-black text-xl">
+              Donate Now</button>
           </div>
         </div>
       </div>
@@ -95,8 +94,7 @@
           </div>
           <div class="pt-8">
             <button id="btn-donation1"
-              class=" btn w-full h-10 border rounded-s px-3 bg-green-500 text-black font-bold "> Donate
-              Now</button>
+              class=" btn w-full h-10 border rounded-s px-3 bg-green-500 text-black text-xl "> Donate Now</button>
           </div>
         </div>
       </div>
@@ -124,7 +122,7 @@
               placeholder="Write Donation Amount">
           </div>
           <div class="pt-10">
-            <button id="btn-donation2" class=" btn w-full h-10 border rounded-s px-3  bg-green-500 text-black font-bold">
+            <button id="btn-donation2" class=" btn w-full h-10 border rounded-s px-3  bg-green-500 text-black text-xl">
               Donate Now</button>
           </div>
         </div>
@@ -132,7 +130,7 @@
     </div>
   </main>
   <!-- Open the modal using ID.showModal() method -->
-  <dialog id="my-modal" class="modal">
+   <dialog id="my-modal" class="modal">
     <div class="modal-box text-center pt-14 ">
       <h3 class=" font-bold text-5xl pb-5">Congrates!</h3>
       <div class="flex justify-center">     
@@ -142,17 +140,22 @@
       <h1 class="text-2xl text-black font-bold">Successfully</h1>
       <div class="modal-action">
         <form method="dialog">
-          <!-- if there is a button in form, it will close the modal -->
-           <div class="pt-8">   
+           <div class="pt-8 flex justify-center">   
                    <button class="btn bg-green-400 hover:bg-lime-500">Close Confirmation</button>
            </div>
         </form>
       </div>
     </div>
   </dialog>
+  <!-- history -->
+  <div class="hidden" id="btn-history-display">
+<h1>ia an   tyug</h1>
+
+  </div>
   <script src="./js/Donation.js"></script>
   <script src="./js/donation-1.js"></script>
   <script src="./js/donation-2.js"></script>
+  <script src="./js/history-donation.js"></script>
 </body>
 
 </html>

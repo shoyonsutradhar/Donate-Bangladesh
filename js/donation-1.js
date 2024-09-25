@@ -17,7 +17,7 @@ if(inputAddDonete1 >= 0){
 
     const remainingBalance = mainBalanceNumber - inputAddDonete1Number;
     document.getElementById('main-balance').innerText = remainingBalance;
-
+    // showModal
     document.getElementById("my-modal").showModal();
 
 }

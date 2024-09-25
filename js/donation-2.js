@@ -19,7 +19,7 @@ document.getElementById('btn-donation2').addEventListener('click', function (eve
         const remainingBalance = mainBalanceNumber - inputAddDonete2Number;
         document.getElementById('main-balance').innerText = remainingBalance;
 
-
+        // showmodal
         document.getElementById("my-modal").showModal();
 
     }
