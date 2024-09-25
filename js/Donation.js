@@ -1,9 +1,12 @@
-
 document.getElementById('btn-donation').addEventListener('click', function (event) {
     event.preventDefault();
     const moneyInput = document.getElementById('input-add-donete').value;
     const moneyInputNumber = parseFloat(moneyInput);
-    if (moneyInput >= 0) {
+    if (moneyInputNumber <= 0 || moneyInput.trim() === "") {
+        alert('Failed to Donate! Please try again.');
+
+    }
+    else {
         const donateMoney = document.getElementById('donate-money').innerText;
         const donateMoneyNumber = parseFloat(donateMoney);
 
@@ -26,11 +29,6 @@ document.getElementById('btn-donation').addEventListener('click', function (even
         <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
     `
         const historyItem = document.getElementById('btn-history-display');
-        historyItem.insertBefore(card1History , historyItem.firstChild);
-    }
-    else {
-        alert('Failed to Donate! Please try again.');
+        historyItem.insertBefore(card1History, historyItem.firstChild);
     }
 })
-
-
