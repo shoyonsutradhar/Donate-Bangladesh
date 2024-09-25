@@ -8,7 +8,7 @@ document.getElementById('btn-donation1').addEventListener('click', function (eve
     }
     else {
         const donateMoney = document.getElementById('donate-money1').innerText;
-        const donateMoneyNumber = parseFloat(donateMoney1);
+        const donateMoneyNumber = parseFloat(donateMoney);
 
         const totalMoney = donateMoneyNumber + moneyInputNumber;
         document.getElementById('donate-money1').innerText = totalMoney;
@@ -16,7 +16,7 @@ document.getElementById('btn-donation1').addEventListener('click', function (eve
 
         const mainBalance = document.getElementById('main-balance').innerText;
         const mainBalanceNumber = parseFloat(mainBalance);
-        const remainingBalance = mainBalanceNumber - moneyInput1Number;
+        const remainingBalance = mainBalanceNumber - moneyInputNumber;
         document.getElementById('main-balance').innerText = remainingBalance;
 
         // showModal
